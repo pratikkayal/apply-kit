@@ -1,0 +1,31 @@
+# Optional standalone scoring config.
+#
+# The evaluator derives positive terms from your `targetRoles` automatically and
+# layers `preferences.scoring` from your profile on top. This file documents the
+# shape if you want to keep scoring rules separate from a profile or share a
+# team-wide ruleset.
+#
+# Matching is case-insensitive substring matching against:
+#   "<company> <title> <location> <department> <description>"
+
+positive:
+  # term: weight (added when present)
+  backend: 1.5
+  distributed systems: 1.2
+  platform: 1.0
+  postgres: 0.8
+  remote: 0.6
+
+negative:
+  # term: weight (negative numbers subtract)
+  intern: -4.0
+  unpaid: -4.0
+  "commission only": -3.0
+
+companyBonus:
+  # CompanyName: weight (added when the posting's company matches exactly)
+  Globex: 0.5
+
+# Location signal is taken from profile.preferences.locations:
+#   allow: [remote, europe]   # soft +0.8 when a posting location matches
+#   block: [onsite-only]      # hard -2.0 when a posting location matches

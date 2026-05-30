@@ -1,0 +1,24 @@
+{
+  "name": "applykit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A generalized, multi-user, multi-provider job-application automation toolkit.",
+  "bin": {
+    "applykit-onboard": "bin/onboard.mjs",
+    "applykit-apply": "bin/apply.mjs",
+    "applykit-resume": "bin/resume.mjs"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "onboard": "node bin/onboard.mjs",
+    "apply": "node bin/apply.mjs",
+    "resume": "node bin/resume.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

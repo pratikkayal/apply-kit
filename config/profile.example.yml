@@ -1,0 +1,59 @@
+# ApplyKit profile template.
+#
+# You normally generate this by running onboarding:
+#   npm run onboard            (interactive)
+#   npm run onboard -- --demo  (synthetic, non-interactive)
+#
+# This template documents every field. Copy it, fill it in, and place it at
+# data/users/<your-id>/profile.yml — or pass it directly:
+#   node bin/resume.mjs --profile <path-to-this-file> --company "Acme"
+schemaVersion: 1
+
+identity:
+  name: ""            # required
+  email: ""           # required (must be a valid email)
+  phone: ""
+  location: ""
+
+links:                # socials & professional links — all optional
+  linkedin: ""
+  github: ""
+  website: ""
+  twitter: ""
+  other: []           # - { label: "Scholar", url: "https://..." }
+
+summary: ""           # one-line professional summary
+
+targetRoles: []       # drives evaluation keywords, e.g. ["Senior Backend Engineer"]
+
+skills: []            # ["Node.js", "PostgreSQL", ...]
+
+experience:           # most recent first
+  - company: ""
+    role: ""
+    location: ""
+    period: ""        # "2021 - Present"
+    context: ""       # one line about the team/role
+    bullets: []       # achievement bullets (each becomes grounded resume evidence)
+
+education:
+  - institution: ""
+    degree: ""
+    field: ""
+    period: ""
+
+publications: []      # - { title, venue, summary, url }
+
+preferences:
+  provider: ""        # openai | anthropic | bedrock | kiro | local
+  locations:
+    allow: []         # soft bonus if a posting location matches
+    block: []         # hard penalty if a posting location matches
+  scoring:
+    positive: {}      # { "term": weight }  e.g. { "backend": 1.5 }
+    negative: {}      # { "term": weight }  e.g. { "intern": -4.0 }
+    companyBonus: {}  # { "CompanyName": weight }
+
+attachments: []       # populated by onboarding when you import resumes/cover letters
+
+freeform: []          # - { label, content } — anything else ApplyKit should know

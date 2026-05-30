@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+*.log
+
+# Environment / secrets — never commit real keys
+.env
+
+# Per-user runtime data is private by default. Only the synthetic example
+# profile under examples/ is tracked.
+/data/
+output/
+tmp/
+tests/tmp/

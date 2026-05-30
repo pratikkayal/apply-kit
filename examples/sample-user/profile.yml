@@ -1,0 +1,82 @@
+# Synthetic example profile for ApplyKit. Contains NO real personal data.
+# Try it:  node bin/resume.mjs --profile examples/sample-user/profile.yml --company "Acme" --title "Senior Backend Engineer"
+schemaVersion: 1
+identity:
+  name: Alex Doe
+  email: alex.doe@example.com
+  phone: "+1-555-0100"
+  location: Remote (UTC+0)
+links:
+  linkedin: https://linkedin.com/in/alexdoe-example
+  github: https://github.com/alexdoe-example
+  website: https://alexdoe.example
+  twitter: https://x.com/alexdoe_example
+  other:
+    - label: Google Scholar
+      url: https://scholar.example/alexdoe
+summary: >-
+  Backend engineer with 8 years building reliable, high-throughput services.
+  Ships pragmatic systems, mentors teams, and cares about observability.
+targetRoles:
+  - Senior Software Engineer
+  - Backend Engineer
+  - Platform Engineer
+skills:
+  - JavaScript
+  - Node.js
+  - TypeScript
+  - PostgreSQL
+  - AWS
+  - Docker
+  - Kubernetes
+  - System Design
+experience:
+  - company: Globex
+    role: Senior Software Engineer
+    location: Remote
+    period: 2021 - Present
+    context: Payments platform team serving high-volume transaction traffic.
+    bullets:
+      - Designed an idempotent payments API that cut duplicate-charge incidents to near zero.
+      - Led a PostgreSQL partitioning effort that reduced p99 query latency by 45%.
+      - Mentored four engineers and introduced a lightweight design-review process.
+  - company: Initech
+    role: Software Engineer
+    location: Springfield
+    period: 2017 - 2021
+    context: Internal tooling group building developer-productivity services.
+    bullets:
+      - Built a CI caching layer that shortened average build times from 18 to 7 minutes.
+      - Migrated a monolith module to a containerized service with zero downtime.
+education:
+  - institution: State University
+    degree: B.S.
+    field: Computer Science
+    period: 2013 - 2017
+publications:
+  - title: "Practical Idempotency Patterns for Payment Systems"
+    venue: Internal Engineering Journal
+    summary: A survey of idempotency-key strategies and their failure modes.
+    url: https://alexdoe.example/idempotency
+preferences:
+  provider: openai
+  locations:
+    allow:
+      - remote
+      - europe
+    block:
+      - onsite-only
+  scoring:
+    positive:
+      backend: 1.5
+      distributed systems: 1.2
+      postgres: 0.8
+    negative:
+      intern: -4.0
+      unpaid: -4.0
+    companyBonus:
+      Globex: 0.5
+attachments: []
+freeform:
+  - label: Work authorization
+    content: Authorized to work in the EU and US; open to remote.
