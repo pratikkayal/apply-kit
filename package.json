@@ -10,7 +10,7 @@
     "applykit-resume": "bin/resume.mjs"
   },
   "scripts": {
-    "test": "node --test \"tests/**/*.test.mjs\"",
+    "test": "node --test",
     "onboard": "node bin/onboard.mjs",
     "apply": "node bin/apply.mjs",
     "resume": "node bin/resume.mjs"

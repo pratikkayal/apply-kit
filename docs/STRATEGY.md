@@ -38,7 +38,8 @@ Each module lands with its tests. Nothing ships that hasn't run green under
 
 ## Testing strategy (enforced, hermetic)
 
-- Runner: `node --test "tests/**/*.test.mjs"`. No watch mode.
+- Runner: `node --test` (default discovery finds every `*.test.mjs`
+  recursively and skips `node_modules`; works across Node 20 and 22). No watch mode.
 - **No network:** provider tests stub `global.fetch`.
 - **No native deps:** resume output is Markdown; no pdfinfo/pdftotext.
 - **Isolation:** every test that writes uses a temp `data/` dir via env override
